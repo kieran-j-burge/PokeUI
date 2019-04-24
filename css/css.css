@@ -1,0 +1,19 @@
+.half-width{
+    width: 50%;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fit-content{
+    width: fit-content;
+}
+
+.width-100{
+    width: 100%;
+}
+
+
+/*Button animations*/
