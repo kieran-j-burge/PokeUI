@@ -35,15 +35,45 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12 col-sm-12 center">
-          <div class="half-width center">
+          <div class="half-width center-h">
             <img class="width-100" src="images/logo.png" alt="">
           </div>
         </div>
       </div>
     </div>
   </div>
-  <button class="btn btn-primary"><span><<</span></button>
-  <button class="btn btn-primary"><span>>></span></button>
+
+  <div class="container-fluid">
+    <div id="search-bar-row" class="row">
+      <div class="col-md-6 col-sm-12 center-h">
+        <div class="md-form active-pink active-pink-2 mb-3 mt-0">
+          <input id="pokemon-search" class="form-control" type="text" placeholder="Search" aria-label="Search">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12 center-h">
+        <div id="pokemon-show-container" class="center-h">
+            <div id="prev-button" class="float-left w-10">
+              <button class="btn btn-primary center-v float-left mrg-10"><span><<</span></button>
+            </div>
+            <div class="float-left w-80">
+              <div id="pokemon-img-container" class="w-100">
+                <div id="pokemon-img-frame">
+                  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png" alt="">
+                </div>
+              </div>
+              <div id="pokemon-stats-container" class="w-100">
+                <h1>hello</h1>
+              </div>
+            </div>
+            <div id="next-button" class="float-left w-10">
+              <button class="btn btn-primary center-v float-right mrg-10"><span>>></span></button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   </body>
 </html>

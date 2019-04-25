@@ -1,19 +1,69 @@
+
+/*MainDom*/
+
+
+
+
+/*re-use classes*/
 .half-width{
     width: 50%;
 }
 
-.center{
+.center-h{
     margin-left: auto;
     margin-right: auto;
+    float: none;
 }
 
 .fit-content{
     width: fit-content;
 }
 
+
 .width-100{
     width: 100%;
 }
 
+.float-left{
+    float: left;
+}
 
-/*Button animations*/
+.float-right{
+    float: right;
+}
+
+/*margin classes*/
+.mrg-10{
+    margin: 10px;
+}
+
+/*width percentage classes*/
+.w-10{
+    width: 10%;
+}
+
+.w-80{
+    width: 80%;
+}
+
+
+
+/*IDs*/
+#pokemon-show-container{
+    min-height: 400px;
+    background-color: aliceblue;
+    border: 1px solid #afaeae;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px #afaeae;
+}
+
+#search-bar-row{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/*Search bar*/
+.active-pink-2 input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #f48fb1;
+    box-shadow: 0 1px 0 0 #f48fb1;
+}
