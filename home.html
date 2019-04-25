@@ -5,9 +5,11 @@
     <link rel="stylesheet"  href="bootstrap/css/bootstrap.css"/>
     <link rel="stylesheet"  href="bootstrap/css/bootstrap-theme.css"/>
     <link rel="stylesheet"  href="css/css.css"/>
+    <link rel="shortcut icon" href="images/favicon.ico" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script  src="bootstrap/js/bootstrap.js"></script>
     <script src="js/js.js"></script>
+
   </head>
 
   <body>
@@ -45,12 +47,30 @@
 
   <div class="container-fluid">
     <div id="search-bar-row" class="row">
-      <div class="col-md-6 col-sm-12 center-h">
+      <div class="col-md-3 col-sm-12 center-h">
         <div class="md-form active-pink active-pink-2 mb-3 mt-0">
           <input id="pokemon-search" class="form-control" type="text" placeholder="Search" aria-label="Search">
         </div>
       </div>
     </div>
+
+    <div id="favourite-row" class="row">
+      <div class="col-md-3 col-sm-12 center-h">
+        <div class="btn-group w-100">
+          <button type="button" class="btn btn-warning dropdown-toggle w-100" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Favourites
+          </button>
+          <ol class="dropdown-menu w-100">
+            <li class="dropdown-item" href="#">Action</li>
+            <li class="dropdown-item" href="#">Another action</li>
+            <li class="dropdown-item" href="#">Something else here</li>
+            <div class="dropdown-divider"></div>
+            <li class="dropdown-item" href="#">Separated link</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
     <div class="row">
       <div class="col-md-6 col-sm-12 center-h">
         <div id="pokemon-show-container" class="center-h">
@@ -60,7 +80,7 @@
             <div class="float-left w-80">
               <div id="pokemon-img-container" class="w-100">
                 <div id="pokemon-img-frame">
-                  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png" alt="">
+                  <img id="pokemon-img" src="https://www.freeiconspng.com/uploads/pokeball-photo-7.png" alt="">
                 </div>
               </div>
               <div id="pokemon-stats-container" class="w-100">

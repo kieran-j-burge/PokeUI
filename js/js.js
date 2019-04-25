@@ -16,14 +16,10 @@ $( document ).ready(function() {
     }
 
     function getPokemon(string) {
-        // $.get( "https://pokeapi.co/api/v2/pokemon/"+string+"/", function( data ) {
-        //     console.log(data);
-        // });
-
         $.ajax({ cache: false,
             url: "https://pokeapi.co/api/v2/pokemon/"+string+"/",
-            success: function (data) {
-                console.log(data);
+            success: function (json) {
+            renderPokemonOnUI(json);
             },
             error:function (xhr, ajaxOptions, thrownError){
                 if(xhr.status==404) {
@@ -31,8 +27,19 @@ $( document ).ready(function() {
                 }
             }
         });
-
     }
+
+    function renderPokemonOnUI(json){
+        console.log(json);
+        var img = json.sprites.front_default;
+        var stats = json.stats;
+        var moves = json.moves;
+        var weight = json.weight;
+
+        $("#pokemon-img").attr("src",img)
+    }
+
+
 
     $("#pokemon-search").on('input',function(e) {
         var string = this.value;

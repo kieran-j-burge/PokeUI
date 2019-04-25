@@ -10,8 +10,8 @@
 }
 
 .center-h{
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
     float: none;
 }
 
@@ -46,6 +46,10 @@
     width: 80%;
 }
 
+.w-100{
+    width: 100%;
+}
+
 
 
 /*IDs*/
@@ -62,6 +66,14 @@
     margin-bottom: 15px;
 }
 
+#favourite-row{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#pokemon-img{
+    width: 100px;
+}
 /*Search bar*/
 .active-pink-2 input[type=text]:focus:not([readonly]) {
     border-bottom: 1px solid #f48fb1;
