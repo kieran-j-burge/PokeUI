@@ -1,6 +1,9 @@
 # PokeUI
 Pokemon UI task for 3 sided cube
 
+## How to use 
+- Simply open the home.html document and start searching and comparing pokemon
+
 ## Features
 - Search for pokemon using string or integer
 - Randomise a pokemon to view stats
