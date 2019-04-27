@@ -28,5 +28,8 @@ Search: Searching for pokemon takes the parameters of an integer or a string (Th
 - develop branch used for staging working features for master.
 - dev/'feature' branches used for development. Should be merged to develop when working.
 
+## Dev Testing 
+- This application was tested in chrome using dev tools for debugging and mobile testing. 
+
 ## Contributors 
 Kieran Burge
