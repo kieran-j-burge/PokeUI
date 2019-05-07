@@ -111,15 +111,15 @@ $( document ).ready(function() {
     }
 
     //Renders the pokemon information in the desired pokemon container
-    function renderPokemonOnUI(json,id){
-        var img = json.sprites.front_default;
-        var stats = json.stats;
-        var moves = json.moves;
-        var weight = json.weight;
-        var sprites = json.sprites;
+    function renderPokemonOnUI(pokemonJson,id){
+        var img = pokemonJson.sprites.front_default;
+        var stats = pokemonJson.stats;
+        var moves = pokemonJson.moves;
+        var weight = pokemonJson.weight;
+        var sprites = pokemonJson.sprites;
         $("#pokemon"+id+"-img").attr("src",img);
 
-        $("#pokemon"+id+"-stats-container").find(".name").text(json.name);
+        $("#pokemon"+id+"-stats-container").find(".name").text(pokemonJson.name);
 
         $("#pokemon"+id+"-stats-container").find(".sec-img-container").find(".back_default").attr("src",sprites.back_default);
         $("#pokemon"+id+"-stats-container").find(".sec-img-container").find(".back_shiny").attr("src",sprites.back_shiny);
@@ -132,6 +132,24 @@ $( document ).ready(function() {
                 '                    <h2 class="base-stat">'+getProgressBar("bs",stat)+'</h2>\n' +
                 '                  </div>');
         });
+
+        isFavourite(pokemonJson.id,id)
+
+    }
+
+    // Checks if the pokemon is a favourite already
+    function isFavourite(currentId,id){
+        var listJSON = JSON.parse(localStorage.getItem("fav-list"));
+        var isFav = false;
+        listJSON.forEach(function (pokemon) {
+            if (parseInt(pokemon.id) == parseInt(currentId)){
+                $("#pokemon-"+id).find(".favourite-icon-container").find(".favourite").text("Added!");
+                isFav = true;
+            }
+        });
+        if (!isFav){
+            $("#pokemon-"+id).find(".favourite-icon-container").find(".favourite").text("Favourite");
+        }
     }
 
     //Renders progress bar dynamically
@@ -276,9 +294,6 @@ $( document ).ready(function() {
             if(!checkIfDuplicate(listJSON,pokemon)){
                 listJSON.push(pokemon);
                 $(button).text("Added!");
-                setTimeout(function() {
-                    $(button).text("Favourite");
-                }, 500);
             }
             else{
                 alert("You already have this pokemon as a favourite or you have not selected a pokemon")
